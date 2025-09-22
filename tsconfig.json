@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES2022", /* Use a modern ECMAScript version that supports top-level await */
+    "module": "NodeNext", /* Use the modern Node.js module system */
+    "moduleResolution": "NodeNext", /* How TS finds modules */
+    "outDir": "./dist", /* Where to output compiled JavaScript */
+    "rootDir": "./src", /* Where your source TypeScript files are */
+    "strict": true, /* Enable all strict type-checking options */
+    "esModuleInterop": true, /* Enables compatibility with CommonJS modules */
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"] /* Only compile files in the src directory */
+}

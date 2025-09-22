@@ -1,37 +1,37 @@
-import { get_lcs } from '../index.js'
+import { get_lcs } from '../src/lib'
 
 describe('Longest Common Subsequence', () => {
     test('should return "ABCDEF" as lcs of "ABCDEF" and "ABCDEF"', () => {
-        const s1 = 'ABCDEF'
-        const s2 = 'ABCDEF'
+        const s1 = 'ABCDEF'.split('')
+        const s2 = 'ABCDEF'.split('')
         const lcs = get_lcs(s1, s2).map(([i, j]) => s1[i]).join('')
         expect(lcs).toBe('ABCDEF')
     })
 
     test('should return "" as lcs of "ABD" and "XYZ"', () => {
-        const s1 = 'ABC'
-        const s2 = 'XYZ'
+        const s1 = 'ABC'.split('')
+        const s2 = 'XYZ'.split('')
         const lcs = get_lcs(s1, s2).map(([i, j]) => s1[i]).join('')
         expect(lcs).toBe('')
     })
 
     test('should return "XY" as lcs of "AABCXY" and "XYZ"', () => {
-        const s1 = 'AABCXY'
-        const s2 = 'XYZ'
+        const s1 = 'AABCXY'.split('')
+        const s2 = 'XYZ'.split('')
         const lcs = get_lcs(s1, s2).map(([i, j]) => s1[i]).join('')
         expect(lcs).toBe('XY')
     })
 
     test('should return "" as lcs of "" and ""', () => {
-        const s1 = ''
-        const s2 = ''
+        const s1 = ''.split('')
+        const s2 = ''.split('')
         const lcs = get_lcs(s1, s2).map(([i, j]) => s1[i]).join('')
         expect(lcs).toBe('')
     })
 
     test('should return "AC" as lcs of "ABCD" and "AC"', () => {
-        const s1 = 'ABCD'
-        const s2 = 'AC'
+        const s1 = 'ABCD'.split('')
+        const s2 = 'AC'.split('')
         const lcs = get_lcs(s1, s2).map(([i, j]) => s1[i]).join('')
         expect(lcs).toBe('AC')
     })
@@ -43,7 +43,7 @@ describe('Longest Common Subsequence', () => {
         expect(lcs).toBe("this is the lcs")
     })
 
-    test('should return the longest common subsequence', () => {
+    test('should return the longest common subsequence for larger text blocks', () => {
         const s1 = [
             "Coding Challenges helps you become a better software engineer through that build real applications.",
             "I share a weekly coding challenge aimed at helping software engineers level up their skills through deliberate practice.", "I've used or am using these coding challenges as exercise to learn a new programming language or technology.",
